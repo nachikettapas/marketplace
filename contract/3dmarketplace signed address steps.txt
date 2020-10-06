@@ -1,0 +1,33 @@
+Step 1: Perform a hash on the file and initiate announce function.
+Announce parameters
+filehash: 0xb4f13914e02bc9e579c95f3eb46bd9c914d936f4dfc4afce2783129b3793255e
+timestamp: 1598725846
+expiry: 1598725846
+commitment (should be in wei): 2000000000000000000 (2 ether)
+
+Step 2: The player interested in taking part in voting, registers with the register function.
+1. keccak256 via online tool https://emn178.github.io/online-tools/keccak_256.html (player address in this case 0xaf9ddaF35d3cB3b0bA765206fea134483EF65b03)
+"0x78563d8b800e2451d444132933f44409c21143e27753ffd4bbae66f0825e7de1"
+
+2. Prepare a virtual machine with web3. 
+A prebuilt virtual machine has been downloaded from https://medium.com/coinmonks/configuring-ubuntu-and-macos-for-smart-contract-and-dapps-in-ethereum-e6ec329f1a0d.
+https://www.dropbox.com/s/ha3chvm8snip85w/Ubuntu%2016.04.4.ova?dl=0
+This will download a .ova file. Then in virtualbox, use file > import appliances > use the .ova file.
+Once the machine is booted, start Ganache.
+Then run geth attach http://localhost:7545
+
+3. Import the private key corresponding to address 0xaf9ddaF35d3cB3b0bA765206fea134483EF65b03 to the virtual machine web3.
+web3.personal.importRawKey("0xd7ba27e170ed82dc650fd987139fe516394f37809494db64bbee412af897737a","")
+
+4. Using the same address 0xaf9ddaF35d3cB3b0bA765206fea134483EF65b03 and the signature above, sign the transaction using a virtual machine using web3 setup.
+web3.eth.sign("0xaf9ddaF35d3cB3b0bA765206fea134483EF65b03", "0x78563d8b800e2451d444132933f44409c21143e27753ffd4bbae66f0825e7de1")
+"0xab5137672773a14ba46902b956dbbec4be4fb3a0c367c8c677c9d3ccdf95000f4b86515f2167ab45e3aeb194e1d823981cf0e8c6025736df85a53e17df7ab8b601"
+
+5. Initiate the register function.
+Register parameters
+msghash: "0x78563d8b800e2451d444132933f44409c21143e27753ffd4bbae66f0825e7de1"
+signature: "0xab5137672773a14ba46902b956dbbec4be4fb3a0c367c8c677c9d3ccdf95000f4b86515f2167ab45e3aeb194e1d823981cf0e8c6025736df85a53e17df7ab8b601"
+designno: 0
+commitment (should be in wei): 1000000000000000000 (1 ether)
+
+Step 3:
