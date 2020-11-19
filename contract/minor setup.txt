@@ -1,0 +1,67 @@
+Step 1: Perform a hash on the file and initiate announce function.
+Announce parameters using the account 0xF7EC2F4D490E052154605DF6b72515DE4D9E0a68 (vendor) 
+filehash: 0xb4f13914e02bc9e579c95f3eb46bd9c914d936f4dfc4afce2783129b3793255e
+commitment (should be in wei): 3000000000000000000 
+manager: 0x0c312fE7fAE449d55DF3cF0215f30F6bABfa5f43
+
+
+Step 2: Add the following players.
+------------------------------------------------------------------
+0x3aca3dcdd3efb034d70841926c1307846d963bd1c047a4dfa9bc59f6fc907aed
+0x4ca523ea2e1c2346968313994498307c2204a2ccc3a440af5e54d88a2f02dd9b12a956bb7f8229d19c1b49ad193b53ca3ddb9af992019ee78e72ca16210f3bd700
+------------------------------------------------------------------
+0x0a027a3ec2d499edf63955c132162ae928fdb4574543a88ef8baf7efab55050e
+0x54df8b11d6668d496063386c2a08bde1068b9768a6684bf724804c3bca65fb2e4a4c49e11109e9815df3a806766e6671b07883fbab2d78685afb54ecccabf42900
+------------------------------------------------------------------
+0x983a000c15e30380d50d539d1beb662b6eca30b2010e98bb01472c4565649e18
+0xbca80e1fece4af17b758c0188f11e9bdec141560e3f2da34c0822331b704ff7f5e81780f80b9c0bc6652ba90d5324c556efb5faa90495e4a63e5b3cfc0bc12e601
+------------------------------------------------------------------
+
+
+Step 3: The player interested in taking part in voting, registers with the register function. Initiate the register function.
+Register parameters
+------------------------------------------------------------------
+0x3aca3dcdd3efb034d70841926c1307846d963bd1c047a4dfa9bc59f6fc907aed
+0x4ca523ea2e1c2346968313994498307c2204a2ccc3a440af5e54d88a2f02dd9b12a956bb7f8229d19c1b49ad193b53ca3ddb9af992019ee78e72ca16210f3bd700
+designno: 0
+commitment (should be in wei): 2000000000000000000 (2 ether)
+------------------------------------------------------------------
+0x0a027a3ec2d499edf63955c132162ae928fdb4574543a88ef8baf7efab55050e
+0x54df8b11d6668d496063386c2a08bde1068b9768a6684bf724804c3bca65fb2e4a4c49e11109e9815df3a806766e6671b07883fbab2d78685afb54ecccabf42900
+designno: 0
+commitment (should be in wei): 2000000000000000000 (2 ether)
+------------------------------------------------------------------
+0x983a000c15e30380d50d539d1beb662b6eca30b2010e98bb01472c4565649e18
+0xbca80e1fece4af17b758c0188f11e9bdec141560e3f2da34c0822331b704ff7f5e81780f80b9c0bc6652ba90d5324c556efb5faa90495e4a63e5b3cfc0bc12e601
+designno: 0
+commitment (should be in wei): 2000000000000000000 (2 ether)
+------------------------------------------------------------------
+
+
+Step 4: Use the manager account to set the file received to true.
+0x887f9Fb254302f19f01424e6bfE82A07b8DB3577
+0x02a6160133eC56ffCBc57f352d360725429Ac8FD
+0x1c3b7d115d982051A2Cd3D2BF82C625F5008C1a9
+
+Step 5: The verifier submit the cryptographic proof of the vote.
+1
+0x9ed94908596150aae558612686910579395ba17f00bb4da99ecf2447190a6c10  		1001
+1
+0xcf25089b6f92cc67e01dc6facbe81ded4b37dbbe4b387b9049d159c78bdcfab3		1002
+1
+0x5904da7c0e8f2e0306408fa6e221a4d95dfe0b30fb7c003b317406ab87c4cb14		1003
+
+-1
+0xb8ddd384118365523189d2d26d2cf5bbe14e7ff160d86d40df28be896573498f		1001
+-1
+0x80957d80f513640811add14ed75efad6224c2b7c6d173b776bfe36f14fad9669		1002
+-1
+0x3052ec11f5ab64b0e3c51733a6f50c589a451411a664bb39e37c9569fdc3b590		1003
+
+Step 6: The actual vote and the nonce used
+1
+nonce: 0x3130303100000000000000000000000000000000000000000000000000000000    bytes for 1001
+1
+nonce: 0x3130303200000000000000000000000000000000000000000000000000000000    bytes for 1002
+1
+nonce: 0x3130303300000000000000000000000000000000000000000000000000000000    bytes for 1003
